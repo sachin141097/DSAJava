@@ -1,4 +1,4 @@
-package StriverA2ZandNeetCode250;
+package com.leetcode.solutions;
 
 public class HelloWorld {
     public static void main(String[] args) {

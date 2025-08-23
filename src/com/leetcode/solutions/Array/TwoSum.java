@@ -1,4 +1,4 @@
-package StriverA2ZandNeetCode250.Array;
+package com.leetcode.solutions.Array;
 
 import java.util.Arrays;
 

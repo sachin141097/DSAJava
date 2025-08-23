@@ -1,4 +1,4 @@
-package StriverA2ZandNeetCode250.Array;
+package com.leetcode.solutions.Array;
 
 /*
 Given a m * n matrix of ones and zeros, return how many square submatrices have all ones.

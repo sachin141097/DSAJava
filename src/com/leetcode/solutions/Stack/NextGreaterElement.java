@@ -1,4 +1,4 @@
-package StriverA2ZandNeetCode250.Stack;
+package com.leetcode.solutions.Stack;
 /*
 Given an array arr of size n containing elements, find the next greater element for each element in the array in the order of their appearance.
 
