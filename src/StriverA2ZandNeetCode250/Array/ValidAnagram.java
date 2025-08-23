@@ -1,4 +1,4 @@
-package NeetCode250.Array;
+package StriverA2ZandNeetCode250.Array;
 import java.util.Scanner;
 public class ValidAnagram {
     private static boolean checkAnagram(String s1,String s2){

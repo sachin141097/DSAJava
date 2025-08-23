@@ -1,4 +1,4 @@
-package NeetCode250;
+package StriverA2ZandNeetCode250;
 
 public class HelloWorld {
     public static void main(String[] args) {
