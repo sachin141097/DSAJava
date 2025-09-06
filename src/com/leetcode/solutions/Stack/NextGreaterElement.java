@@ -46,6 +46,7 @@ public class NextGreaterElement {
         }
         return result;
     }
+    
 
     public static void main(String[] args) {
         int[] arr = {1, 3, 2, 4};
