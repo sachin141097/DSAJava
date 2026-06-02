@@ -3,7 +3,7 @@ package Arrays;
 import java.util.Scanner;
 
 public class LargestElement {
-    public static int findLargest(int[] arr, int n) {
+    private static int findLargest(int[] arr, int n) {
         int largest = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
             if (arr[i] > largest) {

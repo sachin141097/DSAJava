@@ -3,9 +3,9 @@ package Arrays;
 import java.util.Scanner;
 
 public class SecondLargest {
-    public static int findSecondLargest(int[] arr, int n) {
-        int largest = -1;
-        int secondLargest = -1;
+    private static int findSecondLargest(int[] arr, int n) {
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
             if (arr[i] > largest) {
                 secondLargest = largest;
@@ -15,7 +15,7 @@ public class SecondLargest {
                 secondLargest = arr[i];
             }
         }
-        return secondLargest;
+        return secondLargest == Integer.MIN_VALUE ? -1 : secondLargest;
     }
 
     public static void main(String[] args) {

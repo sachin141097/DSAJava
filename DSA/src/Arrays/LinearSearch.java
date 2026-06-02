@@ -30,7 +30,7 @@ Time Complexity: O(N)
 import java.util.Scanner;
 
 public class LinearSearch {
-    public static int checkElementExist(int[] arr, int n, int target) {
+    private static int checkElementExist(int[] arr, int n, int target) {
         for (int i = 0; i < n; i++) {
             if (arr[i] == target) {
                 return i;
