@@ -69,6 +69,7 @@ public class UnionOfTwoSortedArrays {
             arr2[i] = sc.nextInt();
         }
         System.out.println(findUnion(arr1, arr2));
+        sc.close();
 
     }
 }
