@@ -13,7 +13,7 @@ public class StockSpanUsingStack {
                 st.pop();
             }
             if (st.isEmpty()) {
-                ans[i] = -1;
+                ans[i] = i + 1;
             } else {
                 ans[i] = st.peek();
             }
