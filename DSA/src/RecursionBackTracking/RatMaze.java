@@ -9,7 +9,7 @@ import java.util.ArrayList;
 0 1 1 1
 
 paths=[DDRDRR,DRDDRR]
-Time Complexity: O(4*(rows*cols))
+Time Complexity: O(4^(rows*cols))
 Space Complexity: O(rows*cols)
 At every cell we have 4 possibilities up,down,left,right
  */
