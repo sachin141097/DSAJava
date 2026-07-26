@@ -27,11 +27,11 @@ public class PalindromePartitioning {
             return;
         }
         for (int i = index; i < s.length(); i++) {
-            String prefix = s.substring(index, i + 1);
+            String prefix = s.substring(index, i + 1);//first take substring [0,0] for partioning,then [0,1],then [0,2] and [0,n-1]
             if (isPalindrome(prefix)) {
                 path.add(prefix);
-                dfs(i + 1, s, path, result);
-                path.remove(path.size() - 1);
+                dfs(i + 1, s, path, result); //If partitioned string is palindrome then we check for remaining string
+                path.remove(path.size() - 1); //Remove prefix so next prefix would get chance
             }
         }
 
