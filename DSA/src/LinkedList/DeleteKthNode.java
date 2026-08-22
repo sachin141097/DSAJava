@@ -1,12 +1,13 @@
 package LinkedList;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.List;
 
 /*
 Time Complexity: O(N)
  */
-public class DeleteNodeFromTail {
+public class DeleteKthNode {
     private static class Node {
         int data;
         Node next;
@@ -18,8 +19,8 @@ public class DeleteNodeFromTail {
     }
 
     private static List<Integer> traverseSinglyLinkedList(Node head) {
-        Node temp = head;
         List<Integer> ans = new ArrayList<>();
+        Node temp = head;
         while (temp != null) {
             ans.add(temp.data);
             temp = temp.next;
@@ -27,22 +28,29 @@ public class DeleteNodeFromTail {
         return ans;
     }
 
-    private static Node deleteNodeFromEnd(Node head) {
-        if (head == null) {
+    private static Node deleteKthNode(Node head, int k) {
+        if (head == null || k <= 0) {
             return null;
         }
-        //only one node
-        if (head.next == null) {
-            head = null;
+        //k=1 means delete head
+        if (k == 1) {
+            head = head.next;
             return head;
         }
-        //find the second last node
-        Node current = head;
-        while (current.next.next != null) {
+        int position = 2;
+        Node prev = head;
+        Node current = head.next;
+        while (current != null && position < k) {
+            prev = current;
             current = current.next;
+            position++;
         }
-        //remove the tail
-        current.next = null;
+        //k is greater than length of list
+        if (current == null) {
+            return head;
+        }
+        //delete kth node
+        prev.next = current.next;
         return head;
     }
 
@@ -54,12 +62,16 @@ public class DeleteNodeFromTail {
         n1.next = n2;
         n2.next = n3;
         n3.next = n4;
-        System.out.println("Before deleting a node from end");
+        System.out.println("Before deleting a node:");
         List<Integer> result = traverseSinglyLinkedList(n1);
         System.out.println(result);
-        System.out.println("After deleting a node from end");
-        Node newHead = deleteNodeFromEnd(n1);
-        List<Integer> resultAfterNodeDelete = traverseSinglyLinkedList(newHead);
-        System.out.println(resultAfterNodeDelete);
+        System.out.println("Enter value of K");
+        Scanner sc = new Scanner(System.in);
+        int k = sc.nextInt();
+        Node resultAfterDelete = deleteKthNode(n1, k);
+        List<Integer> resultPostDelete = traverseSinglyLinkedList(resultAfterDelete);
+        System.out.println(resultPostDelete);
+        sc.close();
+
     }
 }
