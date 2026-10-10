@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 /*
-O(ElogE)
+Time Complexity: O(ElogE)
  */
 class DisSet {
     int[] parent;
